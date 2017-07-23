@@ -9,8 +9,9 @@
 
 User.destroy_all
 Experiment.destroy_all
+UserExperiment.destroy_all
 
-User.create(
+u1 = User.create(
 {
   name: "Nardinold P. Tuckwittington",
   address: "The royal institute of self-experimentation",
@@ -19,7 +20,7 @@ User.create(
   orcid_id: 12
   })
 
-User.create(
+u2 = User.create(
 {
   name: "Christopher H. Woodall",
   address: "10 / 8 Lochrin Buildings, Edinburgh",
@@ -28,7 +29,7 @@ User.create(
   orcid_id: 9876
   })
 
-User.create({
+u3 = User.create({
   name: "Nick Woodall",
   address: "9C Upton Close, Norwich",
   email: "neatairways@nhs.co.uk",
@@ -36,7 +37,7 @@ User.create({
   orcid_id: 23445
   })
 
-User.create({
+u4 = User.create({
   name: "Bonnie Auyeung",
   address: "The Meadows, Edinburgh",
   email: "bonnie@auyeung.ed.ac.uk",
@@ -44,7 +45,7 @@ User.create({
   orcid_id: 253434,
   })
 
-Experiment.create( 
+e1 = Experiment.create( 
 {
   title: "do buttered cats land on their backs",
   description: "by buttering the backs of cats is it possible to overcome the natural tendency for cats to land on their feet",
@@ -52,7 +53,7 @@ Experiment.create(
   field: "physics"
   })
 
-Experiment.create( 
+e2 = Experiment.create( 
 {
   title: "superconductivity in UGe2",
   description: "throwing PhD students on the bonfire of pointlessly difficult physics",
@@ -60,7 +61,7 @@ Experiment.create(
   field: "physics",
   })
 
-Experiment.create( 
+e3 = Experiment.create( 
 {
   title: "bromination of thiophene",
   description: "bromination of thiophene rings for the formation of diarylethene molecular switches",
@@ -68,14 +69,53 @@ Experiment.create(
   field: "chemistry",
   })
 
-Experiment.create(
+e4 = Experiment.create(
 {
   title: "alcolism in parents and instances of autism in their children",
   description: "25 year study of 10000 parents and their children",
   image: "COSHH form",
   field: "psycology",
-
   })
+
+UserExperiment.create(
+{
+  users_id: u1.id, experiments_id: e1.id
+  })
+
+# UserExperiment.create(
+# {
+#   users: u1, experiments: e2
+#   })
+
+# UserExperiment.create(
+# {
+#   user: u1, experiment: e3
+#   })
+
+# UserExperiment.create(
+# {
+#   user: u1, experiment: e4
+#   })
+
+# UserExperiment.create(
+# {
+#   user: u2, experiment: e4
+#   })
+
+# UserExperiment.create({
+#   user: u3, experiment: e4
+#   })
+
+# UserExperiment.create({
+#   user: u1, experiment: e4
+#   })
+
+# UserExperiment.create({
+#   user: u1, experiment: e3
+#   })
+
+
+
 
 
 
