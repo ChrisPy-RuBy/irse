@@ -1,4 +1,4 @@
 class UserExperiment < ActiveRecord::Base
-  belongs_to :users
-  belongs_to :experiments
+  belongs_to :user
+  belongs_to :experiment
 end

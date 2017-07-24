@@ -79,40 +79,40 @@ e4 = Experiment.create(
 
 UserExperiment.create(
 {
-  users_id: u1.id, experiments_id: e1.id
+  user_id: u1.id, experiment_id: e1.id
   })
 
-# UserExperiment.create(
-# {
-#   users: u1, experiments: e2
-#   })
+UserExperiment.create(
+{
+  user_id: u1.id, experiment_id: e2.id
+  })
 
-# UserExperiment.create(
-# {
-#   user: u1, experiment: e3
-#   })
+UserExperiment.create(
+{
+  user_id: u1.id, experiment_id: e3.id
+  })
 
-# UserExperiment.create(
-# {
-#   user: u1, experiment: e4
-#   })
+UserExperiment.create(
+{
+  user_id: u1.id, experiment_id: e4.id
+  })
 
-# UserExperiment.create(
-# {
-#   user: u2, experiment: e4
-#   })
+UserExperiment.create(
+{
+  user_id: u2.id, experiment_id: e4.id
+  })
 
-# UserExperiment.create({
-#   user: u3, experiment: e4
-#   })
+UserExperiment.create({
+  user_id: u3.id, experiment_id: e4.id
+  })
 
-# UserExperiment.create({
-#   user: u1, experiment: e4
-#   })
+UserExperiment.create({
+  user_id: u1.id, experiment_id: e4.id
+  })
 
-# UserExperiment.create({
-#   user: u1, experiment: e3
-#   })
+UserExperiment.create({
+  user_id: u1.id, experiment_id: e3.id
+  })
 
 
 

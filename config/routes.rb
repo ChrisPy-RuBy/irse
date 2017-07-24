@@ -2,10 +2,15 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  get({'experiments/:id/user_experiments' => 'experiment_users#index' })
+  
   resources :users do 
     resources :user_experiments
   end
-  resources :experiments 
+  resources :experiments do
+    resources :user_experiments
+  end
+
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
